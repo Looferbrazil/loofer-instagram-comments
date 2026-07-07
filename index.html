@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<title>Comentários Loofer</title>
+</head>
+
+<body>
+
+<h1>Comentários Recuperador</h1>
+
+<div id="comentarios"></div>
+
+<script>
+
+fetch('./comentarios/recuperador.json')
+.then(r=>r.json())
+.then(data=>{
+
+const div=document.getElementById("comentarios");
+
+data.forEach(c=>{
+
+div.innerHTML += `
+<div style="border:1px solid #ddd;padding:20px;margin:20px;border-radius:12px;">
+<h3>${c.nome}</h3>
+<p>${c.comentario}</p>
+❤️ ${c.curtidas}
+</div>
+`;
+
+});
+
+});
+
+</script>
+
+</body>
+</html>
