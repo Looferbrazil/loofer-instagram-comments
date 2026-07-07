@@ -1,39 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
 <meta charset="UTF-8">
-<title>Comentários Loofer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Loofer Instagram Reviews</title>
+
+<link rel="stylesheet" href="estilo.css">
+
 </head>
 
 <body>
 
-<h1>Comentários Recuperador</h1>
+<section class="reviews">
 
-<div id="comentarios"></div>
+    <div class="titulo">
 
-<script>
+        <span>💚 Comentários Reais</span>
 
-fetch('./comentarios/recuperador.json')
-.then(r=>r.json())
-.then(data=>{
+        <h2>O que nossas clientes estão dizendo</h2>
 
-const div=document.getElementById("comentarios");
+        <p>
+            Comentários publicados no Instagram da Loofer Brazil.
+        </p>
 
-data.forEach(c=>{
+    </div>
 
-div.innerHTML += `
-<div style="border:1px solid #ddd;padding:20px;margin:20px;border-radius:12px;">
-<h3>${c.nome}</h3>
-<p>${c.comentario}</p>
-❤️ ${c.curtidas}
-</div>
-`;
+    <div id="instagram-slider"></div>
 
-});
+</section>
 
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 </html>
