@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Loofer Instagram Reviews</title>
+<title>Comentários Instagram</title>
 
 <link rel="stylesheet" href="estilo.css">
 
@@ -13,23 +13,31 @@
 
 <body>
 
-<section class="reviews">
+<section class="instagram-section">
 
-    <div class="titulo">
+    <h2>💚 O que nossas clientes estão dizendo</h2>
 
-        <span>💚 Comentários Reais</span>
+    <p>Comentários reais publicados no Instagram.</p>
 
-        <h2>O que nossas clientes estão dizendo</h2>
+    <div class="slider">
 
-        <p>
-            Comentários publicados no Instagram da Loofer Brazil.
-        </p>
+        <button id="prev">❮</button>
+
+        <div id="galeria"></div>
+
+        <button id="next">❯</button>
 
     </div>
 
-    <div id="instagram-slider"></div>
-
 </section>
+
+<div id="modal">
+
+    <span id="fechar">&times;</span>
+
+    <img id="imagemGrande">
+
+</div>
 
 <script src="script.js"></script>
 
